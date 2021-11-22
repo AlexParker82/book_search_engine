@@ -30,7 +30,7 @@ const resolvers = {
                 throw new AuthenticationError("User not found");
             }
 
-            const passwordCheck = await User.isCorrectPassword(password);
+            const passwordCheck = await user.isCorrectPassword(password);
 
             if (!passwordCheck) {
                 throw new AuthenticationError("User not found");
@@ -39,7 +39,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        saveBook: async (parent, { bookdata }, context) => {
+        saveBook: async (parent, { bookData }, context) => {
             if (context.user) {
                 const addUserBook = await User.findByIdAndUpdate(
                     { _id: context.user._id },
@@ -65,8 +65,8 @@ const resolvers = {
             } else {
                 throw new AuthenticationError("Please log in");
             }
-        }
-    }
+        },
+    },
 
 };
 
