@@ -19,7 +19,7 @@
   - [Questions](#questions)
 
 ## Description
-Full stack application for saving books. Ability to create an account with your email, username, and password.  You can then search for cooks, then add and delete your books  App was converted to use GraphQL instead of RESTful API.
+Full stack application for saving books. Ability to create an account with your email, username, and password.  You can then search for books, then add and delete your books.  The app was converted to use GraphQL instead of RESTful API.
 
 ## Installation
 npm run install
